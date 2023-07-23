@@ -8,7 +8,7 @@
   color: white;
 }
 
-.auth-form-container, .login-form, .register-form {
+.auth-form-container, .login-form, .register-form, .pending-container{
     display: flex;
     flex-direction: column;
 }
@@ -16,6 +16,15 @@
 @media screen and (min-width: 600px) {
     .auth-form-container {
         padding: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 0.3rem;
+    }
+    .pending-container {
+        padding: 3rem;
+        padding-top: 1rem;
         border: 1px solid white;
         border-radius: 10px;
         margin: 0.3rem;

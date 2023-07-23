@@ -10,11 +10,13 @@ export const Charge = (props) => {
         const reqBody = {
             id: id,
             amount: amount,
+            callback_url: "https://810c-69-92-220-143.ngrok-free.app/opennode/webhooks/update",
+            order_id: id,
         };
         const body = JSON.stringify(reqBody);
         const headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'fbf61361-d7f0-4a85-a880-e58566edec42'
+            'Authorization': ''
             };
         var response;
         var response2;
@@ -28,9 +30,10 @@ export const Charge = (props) => {
         } catch (exception) {
             alert("Request failed");}
 
+        props.updateId(id);
         alert("Order successfully created! Payment window will open in a new tab.");
         window.open(response.data.data.hosted_checkout_url, '_blank');
-        props.onFormSwitch('home');
+        props.onFormSwitch('pending');
 
     }
 

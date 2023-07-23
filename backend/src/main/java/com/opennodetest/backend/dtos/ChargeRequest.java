@@ -2,6 +2,10 @@ package com.opennodetest.backend.dtos;
 
 import java.io.Serializable;
 
+/**
+ * This class is a Data Transfer Object built for mapping requests to the createCharge API endpoint, only passing the
+ * relevant parameters and "hiding" the rest within the relevant Order object.
+ */
 public class ChargeRequest implements Serializable {
     private static final long serialVersionUID = -7850841833179046964L;
     private long amount;

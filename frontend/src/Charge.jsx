@@ -10,13 +10,13 @@ export const Charge = (props) => {
         const reqBody = {
             id: id,
             amount: amount,
-            callback_url: "https://810c-69-92-220-143.ngrok-free.app/opennode/webhooks/update",
+            callback_url: "https://1359-69-92-220-143.ngrok-free.app/opennode/webhooks/update",
             order_id: id,
         };
         const body = JSON.stringify(reqBody);
         const headers = {
             'Content-Type': 'application/json',
-            'Authorization': ''
+            'Authorization': 'fbf61361-d7f0-4a85-a880-e58566edec42'
             };
         var response;
         var response2;

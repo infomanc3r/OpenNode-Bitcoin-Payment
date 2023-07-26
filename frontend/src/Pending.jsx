@@ -19,7 +19,7 @@ export const Pending = (props) => {
 
     async function checkStatus(event) {
         const reqBody = {
-            orderId: "order333",
+            orderId: "666",
         };
         const body = JSON.stringify(reqBody);
         const headers = {

@@ -40,7 +40,7 @@ export const Charge = (props) => {
     return (
         <div className="auth-form-container">
             <h2>OpenNode Charge Button</h2>
-            <form className="login-form" onSubmit={(event) => createCharge(event)}>
+            <form className="charge-form" onSubmit={(event) => createCharge(event)}>
                 <label htmlFor="id">Order ID for testing: </label>
                 <input
                     value={id}

@@ -24,7 +24,7 @@ public class WebhooksController {
     @Autowired
     OrderService orderService;
 
-    @PostMapping("/webhooks/status")
+    @GetMapping("/status")
     public ResponseEntity<?> getStatus(@RequestBody StatusRequest request) throws Exception {
         System.out.println("getStatus endpoint successfully called");
 
@@ -48,7 +48,7 @@ public class WebhooksController {
         return ResponseEntity.status(400).build();
     }
 
-    @PostMapping("/webhooks/update")
+    @PostMapping("/update")
     public ResponseEntity<?> updateStatus(@RequestBody String payload) throws Exception {
         System.out.println("updateStatus endpoint successfully called");
         System.out.println("payload: " + payload);

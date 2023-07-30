@@ -27,7 +27,7 @@ export const Pending = (props) => {
         };
         var response;
         try {
-            response = await axios.post('http://localhost:8080/webhooks/status', body, { headers });
+            response = await axios.get('http://localhost:8080/webhooks/status', body, { headers });
         } catch(exception) {
             console.log("exception with post request")
             console.log(exception);
